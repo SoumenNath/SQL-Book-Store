@@ -1,0 +1,15 @@
+html
+	body
+		a(href="/") Home
+		='        '
+		a(href="/books") Browse
+		='        '
+		if loggedIn
+			a(href='/users/'+user.username)=user.username
+		if usT==1
+			h1= "Books in my collection: "
+		else
+			h1= "Books that I am selling: "
+		for b in books
+			a(href='/books/'+b.ISBN)=b.ISBN
+			br

@@ -1,0 +1,19 @@
+{
+  "name": "implementation",
+  "version": "1.0.0",
+  "description": "Application to interact with a database to allow users buy books and other users to sell books.",
+  "main": "webApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soumen Nath",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "parser": "^0.1.4",
+    "pg": "^8.0.2",
+    "pug": "^2.0.4"
+  }
+}

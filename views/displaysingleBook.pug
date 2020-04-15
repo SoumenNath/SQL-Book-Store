@@ -1,0 +1,29 @@
+html
+	body
+		a(href="/") Home
+		='        '
+		a(href="/books") Browse
+		='        '
+		h1= "Name: " + book.name
+		if !loggedIn || usT==2
+			p ISBN: #{book.ISBN}
+			br
+			p Author Name: #{book.author_name}
+			br
+			p Genre:  #{book.genre}
+			br
+			p Number of Pages: #{book.number_of_pages}
+			br
+			p Price: $#{book.price}
+		else
+			a(href='/ubooks/'+user.username) Books In Your Collection
+			br
+			p ISBN: #{book.ISBN}
+			br
+			p Author Name: #{book.author_name}
+			br
+			p Genre:  #{book.genre}
+			br
+			p Number of Pages: #{book.number_of_pages}
+			br
+			p Price: $#{book.price}

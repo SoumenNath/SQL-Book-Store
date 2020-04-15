@@ -1,0 +1,44 @@
+html
+	head
+		title Index
+
+	body
+		a(href="/") Home
+		='        '
+		a(href="/books") Browse
+		='        '
+		if loggedIn
+			a(href='/users/'+user.username)=user.username
+			='        '
+			a(href='/ubooks/'+user.username) Books In Your Collection
+		else
+			br
+			form(method='POST' action='/login')
+				p
+					| username:
+					input(type='text', name='username', required)
+					br
+					| password:
+					input(type='password', name='password', required)
+				input(type='submit', value='Log In')
+			br
+			form(method='POST' action='/regester')
+				p
+					| username:
+					input(type='text', name='username', required)
+					br
+					| password:
+					input(type='password', name='password', required)
+					br
+					| credit card:
+					input(type='text', name='regsB', required)
+					br
+					| address:
+					input(type='text', name='regsA', required)
+					br
+					| buyer or seller? (type b or s)
+					input(type='text', name='usertype', required)
+				input(type='submit', value='Regester')
+		br
+		h1 Welcome to the Soumen's Library, a place where you can buy or sell books
+		br

@@ -1,0 +1,12 @@
+html
+	body
+		a(href="/") Home
+		='        '
+		if loggedIn
+			a(href='/users/'+user.username)=user.username
+			='        '
+			a(href='/ubook/'+user.username) Books In Your Collection
+		h1= "Take a look at these books: "
+		for b in books
+			a(href='/books/'+b.ISBN)=b.name
+			br

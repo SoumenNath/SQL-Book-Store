@@ -1,0 +1,21 @@
+html
+	body
+		a(href="/") Home
+		='        '
+		a(href="/books") Browse
+		='        '
+		a(href='/ubooks/'+user.username) Books In Your Collection
+		h1= "Profile for: " + user.username
+		if usT==1
+			p Registered billing info: #{user.registered_billing_info}
+			br
+			p Registered address: #{user.registered_address}
+			br
+			p Purchased Books
+		else
+			p Bookstore Name: #{user.bookstore_name}
+			br
+			p Number of Books in Inventory: #{user.number_of_books_in_inventory}
+			br
+			p Total Funds: $#{user.amount_of_funds}
+			br
